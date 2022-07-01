@@ -17,7 +17,7 @@ CTL is a toolkit for transfer-learning with the Chemprop message-passing neural 
 
 * [Co-train a base model](#run_base_model)
 
-* [Transfer model parameters](#transfer_parameters)
+* [Transfer model parameters](#transfer_model)
 
 [Credits](#credits)
 
