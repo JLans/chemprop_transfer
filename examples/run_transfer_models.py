@@ -11,11 +11,11 @@ from chemprop.args import PredictArgs
 import os
 data_dir = r'./Mathieu_5+energy_10000r'
 if __name__ == '__main__':
-    for weighting in ['.001', '.01', '.05', '0.1', '0.5']:
+    for weighting in ['0.1', '1']:
         folder = './Mathieu_5M+10000r_'+weighting+'w'
         combined_dir = './combined_5M+10000r_'+weighting+'w'
         separate_test_path = os.path.join(data_dir, 'test_full.csv')
-        fold_list = ['fold_' + str(i) for i in range(5)]
+        fold_list = ['fold_' + str(i) for i in range(1)]
         for fold in fold_list:
             data_folder = os.path.join(data_dir, fold)
             fold_folder = os.path.join(folder,fold)
@@ -39,7 +39,6 @@ if __name__ == '__main__':
                                                               ,args=additional_args)
             
             
-            #args.target_stds[0] = 0.1
             mean_score, std_score = cross_validate(args=args, train_func=run_training
                                                    ,model_list = [transfer_model])
             

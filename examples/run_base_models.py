@@ -23,12 +23,12 @@ data.data = data.data[['smiles', 'energy']]
 data.normalize()
 data.canonicalize_data(column='smiles')
 data_path_FF = './ani_energy_10000r.csv'
-data.save(data_path_FF, rows=10000)
+data.save(data_path_FF, rows=300)
 
 #split data
 seed=1
 data_path_Mathieu = '../data/log_Mathieu_2020_CHNOFCl.csv'
-num_folds=5
+num_folds=1
 temp_dir = './temp'
 val = 0.1
 test = .29333
@@ -39,11 +39,11 @@ split_data(data_path_FF, (1, 0, 0), seed=seed, num_folds=num_folds
                , save_dir=temp_dir)
 #combine files    
 combined_dir = './combined_5M+energy_10000r'
-combine_files(combined_dir, [directory1, temp_dir], multiply=[5,1])
+combine_files(combined_dir, [directory1, temp_dir], multiply=[2,1])
 shutil.rmtree(temp_dir)
 
 
-for weighting in ['.001', '.01', '.05', '0.1', '0.5', '0.75', '1', '5']:
+for weighting in ['0.1', '1']:
     save_dir = r'./combined_5M+10000r_' + weighting+'w'
     separate_test_path = os.path.join(combined_dir, 'test_full.csv')
     fold_list = ['fold_' + str(i) for i in range(num_folds)]
@@ -61,8 +61,8 @@ for weighting in ['.001', '.01', '.05', '0.1', '0.5', '0.75', '1', '5']:
                 '--separate_val_path', separate_val_path,
                 '--separate_test_path', separate_test_path,
                 '--save_dir', fold_folder,
-                '--epochs', '10', #10
-                '--batch_size', '25', #25
+                '--epochs', '2', #10
+                '--batch_size', '80', #25
                 '--final_lr', '0.00005', #.00005
                 '--init_lr', '0.00001', #.00001
                 '--max_lr', '0.001', #0.0005

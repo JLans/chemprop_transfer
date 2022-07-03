@@ -123,18 +123,19 @@ class Transfer_Model:
     def get_train_args(self, args):
         if type(args) == list:
             args = self.list_to_dict(args)
-        args_all = dict([('--'+key,value) for key, value 
+        args_chemprop = dict([('--'+key,value) for key, value 
                          in TrainArgs()._get_class_dict().items()])
+        args_all = {}
         args_all.update(self.list_to_dict(get_default_train_args()))
         if self.base_args is not None:
-            for key in list(args_all.keys()):
-                if (key[2:] in self.base_args.__dict__.keys() and
-                   key[2:] not in ['loss_weighting']):
-                    args_all.update({key: self.base_args.__dict__[key[2:]]})
+            for key in self.base_args.as_dict().keys():
+                key = '--' + key
+                if (key in args_chemprop.keys() and key[2:] not in [
+                        'loss_weighting', 'split_sizes']):
+                    args_all.update({key: self.base_args.as_dict()[key[2:]]})
             if args_all['--multi_branch_ffn'] is not None:
                 del args_all['--ffn_hidden_size']
                 del args_all['--ffn_num_layers']
-                del args_all['--loss_weighting']
         args_all.update(args)
         for key in list(args_all.keys()):
             if str(args_all[key]) in ('None', 'False'):
