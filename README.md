@@ -116,7 +116,7 @@ if __name__ == '__main__':
                      , 'TSvib75', 'TSvib150', 'TSvib300', 'TSvib600', 'TSvib1200'
                      , 'FC_1', 'FC_2', 'FC_3']
     in_column = 'smiles'
-    data_path = './sorted_molecules.csv'
+    data_path = '../data/sorted_molecules.csv'
     data = DATASET(data_path, chunksize=10000)
     data.load_data()
     num_cpus = mp.cpu_count() - 2
