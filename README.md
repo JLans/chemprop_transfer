@@ -79,7 +79,8 @@ if __name__ == '__main__':
     
     mp_func.get_similar_mols(comparison_data_path, data.data
                              , '../../similar_molecules.csv', 1000
-                             , rate=1)
+                             , rate=1
+                             , fast=False)
 ```
 
 ### <a name="sort"/></a>Sort molecules
