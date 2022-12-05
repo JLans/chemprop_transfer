@@ -67,7 +67,8 @@ if __name__ == '__main__':
                            , out_columns=names)
 ```
 
-Filter through "large_data.csv" to identify molecules find the 1000 molecules most similar to each molecule in "Mathieu_2020_CHNO.csv"
+Filter through "large_data.csv" to identify molecules find the 1000 molecules most similar to each molecule in "Mathieu_2020_CHNO.csv".
+"large_data.csv" comes from PNNL as described in the main text of the associated paper. It can be any .csv file with SMILES strings in a column labeled "smiles".
 
 ```python
 if __name__ == '__main__':
@@ -77,7 +78,8 @@ if __name__ == '__main__':
     data.load_data()
     
     mp_func.get_similar_mols(comparison_data_path, data.data
-                             , '../../similar_molecules.csv', 1000)
+                             , '../../similar_molecules.csv', 1000
+                             , rate=1)
 ```
 
 ### <a name="sort"/></a>Sort molecules
