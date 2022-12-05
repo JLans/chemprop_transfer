@@ -111,7 +111,7 @@ from chemprop_transfer.property_generator import PROPERTY_GENERATOR
 model = torchani.models.ANI1ccx(periodic_table_index=True).double()
 PG = PROPERTY_GENERATOR(model)
 if __name__ == '__main__':
-    out_file = './Mathieu_energies.csv'
+    out_file = '../data/ani_properties_sorted.csv'
     out_columns = ['smiles', 'energy', 'fmax', 'SYM', 'MOI1', 'MOI2', 'MOI3'
                      , 'Hvib75', 'Hvib150', 'Hvib300', 'Hvib600', 'Hvib1200'
                      , 'TSvib75', 'TSvib150', 'TSvib300', 'TSvib600', 'TSvib1200'
