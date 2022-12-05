@@ -62,7 +62,9 @@ if __name__ == '__main__':
     names = data.get_column_names()
     
     mp_func.apply_function(mp_func.filter_and_canonicalize, data.data
-                           ,'../data/Mathieu_2020_CHNO.csv', column_names=names)
+                           , in_columns=names
+                           , out_file='../data/Mathieu_2020_CHNO.csv'
+                           , out_columns=names)
 ```
 
 Filter through "large_data.csv" to identify molecules find the 1000 molecules most similar to each molecule in "Mathieu_2020_CHNO.csv"
