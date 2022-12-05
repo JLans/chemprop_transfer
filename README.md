@@ -73,7 +73,7 @@ Filter through "large_data.csv" to identify molecules find the 1000 molecules mo
 ```python
 if __name__ == '__main__':
     comparison_data_path = '../data/Mathieu_2020_CHNO.csv'
-    data_path = '../../large_data.csv'
+    data_path = '../data/large_data.csv'
     data = DATASET(data_path, chunksize=5000)
     data.load_data()
     
@@ -87,8 +87,8 @@ Sort the molecules so that a diverse co-training dataset that maximizes that min
 
 ```python
 from chemprop_transfer.data import DATASET
-data_path = r'../old_data/similar_mols.csv'
-out_file = r'../sorted_molecules.csv'
+data_path = r'../data/similar_molecules.csv'
+out_file = r'../data/sorted_molecules.csv'
 data = DATASET(data_path)
 data.load_data()
 data.order_dataset(out_file, new_molecules='new_mol'
