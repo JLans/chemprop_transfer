@@ -116,7 +116,7 @@ if __name__ == '__main__':
                      , 'Hvib75', 'Hvib150', 'Hvib300', 'Hvib600', 'Hvib1200'
                      , 'TSvib75', 'TSvib150', 'TSvib300', 'TSvib600', 'TSvib1200'
                      , 'FC_1', 'FC_2', 'FC_3']
-    in_column = 'smiles'
+    in_column = 'new_mol'
     data_path = '../data/sorted_molecules.csv'
     data = DATASET(data_path, chunksize=10000)
     data.load_data()
