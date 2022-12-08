@@ -1,6 +1,6 @@
 # The Chemprop Transfer-Learning Toolkit (CTL)
 
-CTL is a toolkit for transfer-learning with the Chemprop message-passing neural network model builder via the package chemprop_transfer.
+CTL is a toolkit for transfer-learning with the Chemprop message-passing neural network model builder via the package chemprop_transfer. If using this package please cite J. Chem. Inf. Model. 2022, 62, 22, 5397–5410. https://doi.org/10.1021/acs.jcim.2c00841. Scripts for generating pre-trained models and figures used in the publication can be found in the directory "JCIM_2022". For example, the script script "run_chemprop_model.py" in "/JCIM_2022/Table_8_Figure_6_Table_9_TableS2" can be used to train the model used to generate results in Tables 8, 9, and S2 as well as Figure 6. The file "ani_properties_filtered_and_normalized.csv" in "/data" contains all data used in co-training for the best models. The necessary chemprop package can be obtained via the command "git clone --branch transfer_learning https://github.com/JLans/chemprop.git".
 
 ## Table of Contents
 [Background and description](#bckgrd_dscrpts)
@@ -32,6 +32,12 @@ This package facilitates the building of a working transfer-model. Relevant tool
 A setup.py file is provided for installation from source.
 ```
 cd chemprop_transfer
+pip install .
+```
+The correct chemprop branch can be installed from source with the following commands.
+```
+git clone --branch transfer_learning https://github.com/JLans/chemprop.git
+cd chemprop
 pip install .
 ```
 
