@@ -1,0 +1,15 @@
+Name,smiles
+PETN,O=[N+]([O-])OCC(CO[N+](=O)[O-])(CO[N+](=O)[O-])CO[N+](=O)[O-]
+CL-20,O=[N+]([O-])N1C2C3N([N+](=O)[O-])C1C1N([N+](=O)[O-])C(C(N1[N+](=O)[O-])N3[N+](=O)[O-])N2[N+](=O)[O-]
+RDX,O=[N+]([O-])N1CN([N+](=O)[O-])CN([N+](=O)[O-])C1
+HMX,O=[N+]([O-])N1CN([N+](=O)[O-])CN([N+](=O)[O-])CN([N+](=O)[O-])C1
+TNAZ,C1C(CN1[N+](=O)[O-])([N+](=O)[O-])[N+](=O)[O-]
+HNS,O=[N+]([O-])c1cc([N+](=O)[O-])c(/C=C/c2c([N+](=O)[O-])cc([N+](=O)[O-])cc2[N+](=O)[O-])c([N+](=O)[O-])c1
+PYX,O=[N+]([O-])c1cc([N+](=O)[O-])c(Nc2nc(Nc3c([N+](=O)[O-])cc([N+](=O)[O-])cc3[N+](=O)[O-])c([N+](=O)[O-])cc2[N+](=O)[O-])c([N+](=O)[O-])c1
+LLM-105,C1(=C(N=C(C(=[N+]1[O-])N)[N+](=O)[O-])N(O)[O])N
+TNT,Cc1c([N+](=O)[O-])cc([N+](=O)[O-])cc1[N+](=O)[O-]
+NTO,O=c1[nH]nc([N+](=O)[O-])[nH]1
+TATB,Nc1c([N+](=O)[O-])c(N)c([N+](=O)[O-])c(N)c1[N+](=O)[O-]
+DNAN,COC1=C(C=C(C=C1)[N+](=O)[O-])[N+](=O)[O-]
+NQ,N=C(N)N[N+](=O)[O-] 
+NQ,NC(N)=N[N+](=O)[O-]
